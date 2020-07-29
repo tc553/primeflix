@@ -7,12 +7,21 @@ import Footer from './components/Footer';
 
 function App() {
   return (
-    <div>
+    <div style={{background: "#141414"}}>
       <Menu />
       <BannerMain
-        videoTitle="Teste"
-        videoDescription="Teste descrição"
-        url="https://www.youtube.com/watch?v=c8mVlakBESE"
+        videoTitle={site_data.categories[0].videos[0].title}
+        url={site_data.categories[0].videos[0].url}
+        videoDescription={site_data.categories[0].videos[0].description}
+      />
+
+      <Carousel
+        ignoreFirstVideo
+        category={site_data.categories[0]}
+      />
+
+      <Carousel
+        category={site_data.categories[1]}
       />
       
       <Footer />

@@ -6,8 +6,8 @@ function VideoCardGroup({
   ignoreFirstVideo,
   category,
 }) {
-  const categoryTitle = category.titulo;
-  const categoryColor = category.cor;
+  const categoryTitle = category.title;
+  const categoryColor = category.color;
   const categoryExtraLink = category.link_extra;
   const videos = category.videos;
   return (
@@ -31,9 +31,11 @@ function VideoCardGroup({
           }
 
           return (
-            <li key={video.titulo}>
+            <li key={video.title}>
               <VideoCard
-                videoTitle={video.titulo}
+                videoTitle={video.title}
+                children={video.title}
+                text={video.title}
                 videoURL={video.url}
                 categoryColor={categoryColor}
               />
