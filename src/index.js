@@ -12,6 +12,7 @@ import {
 } from 'react-router-dom';
 
 import RegisterVideo from './pages/register/video';
+import RegisterCategory from './pages/register/category';
 
 function PageNotFound() {
   return (
@@ -26,6 +27,7 @@ ReactDOM.render(
     <Switch>
       <Route path="/" component={App} exact />
       <Route path="/register/video" component={RegisterVideo} exact />
+      <Route path="/register/category" component={RegisterCategory} exact />
       <Route component={PageNotFound}/>
     </Switch>
   </BrowserRouter>,

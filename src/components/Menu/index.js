@@ -13,7 +13,7 @@ function Menu() {
                 <img className="Logo" src={Logo} alt="PrimeFlix logo" />
             </Link>
 
-            <Button as={Link} className="ButtonLink" to="register/video">
+            <Button as={Link} className="ButtonLink" to="/register/video">
                 Novo vídeo
             </Button>
             {/* <ButtonLink className="ButtonLink" href="/">
