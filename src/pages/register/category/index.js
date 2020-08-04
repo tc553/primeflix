@@ -13,8 +13,7 @@ function RegisterCategory() {
     let [values, setValues] = useState(initialValues);
 
     function handleInput(e) {
-        const { getAttribute, value } = e.target;
-        setValue(getAttribute('name'), value);
+        setValue(e.target.getAttribute('name'), e.target.value);
     }
 
     function setValue(key, value) {
