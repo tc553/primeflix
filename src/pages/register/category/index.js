@@ -26,8 +26,10 @@ function RegisterCategory() {
   }
 
   useEffect(() => {
-    const url = 'http://localhost:8080/categories';
-    fetch(url)
+    const URL_API = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categories'
+      : 'https://primeflix-tc.herokuapp.com/categories';
+    fetch(URL_API)
       .then(async (response) => {
         const responseJson = await response.json();
         setCategories([
