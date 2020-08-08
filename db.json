@@ -1,0 +1,17 @@
+{
+    "categories": [
+        {
+            "id": 1,
+            "name": "Produção do aço",
+            "description": "Vídeos sobre processos de produção de aço",
+            "color": "#cbd1ff"
+        },
+        {
+            "id": 2,
+            "name": "Nossos produtos",
+            "description": "Linha de produtos da Primetals Technologies",
+            "color": "#ff8100"
+        }
+        
+    ]
+}
