@@ -26,7 +26,7 @@ function RegisterCategory() {
   }
 
   useEffect(() => {
-    const url = 'http://localhost:3001/categories';
+    const url = 'http://localhost:8080/categories';
     fetch(url)
       .then(async (response) => {
         const responseJson = await response.json();
