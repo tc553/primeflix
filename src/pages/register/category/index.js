@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import DefaultPage from '../../../components/DefaultPage';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
+import useForm from '../../../hooks/useForm';
+import URL_BACKEND from '../../../config';
 
 function RegisterCategory() {
   const initialValues = {
@@ -11,24 +13,12 @@ function RegisterCategory() {
     color: '',
   };
 
+  const { values, handleInput, clearForm } = useForm(initialValues);
+
   const [categories, setCategories] = useState([]);
-  const [values, setValues] = useState(initialValues);
-
-  function setValue(key, value) {
-    setValues({
-      ...values,
-      [key]: value,
-    });
-  }
-
-  function handleInput(e) {
-    setValue(e.target.getAttribute('name'), e.target.value);
-  }
 
   useEffect(() => {
-    const URL_API = window.location.hostname.includes('localhost')
-      ? 'http://localhost:8080/categories'
-      : 'https://primeflix-tc.herokuapp.com/categories';
+    const URL_API = `${URL_BACKEND}/categories`;
     fetch(URL_API)
       .then(async (response) => {
         const responseJson = await response.json();
@@ -42,7 +32,9 @@ function RegisterCategory() {
   return (
     <DefaultPage>
       <h1>
-        Cadastrar categoria: { values.title }
+        Cadastrar categoria:
+        {' '}
+        { values.title }
       </h1>
 
       <form onSubmit={function handleSubmit(e) {
@@ -52,7 +44,7 @@ function RegisterCategory() {
           values,
         ]);
 
-        setValues(initialValues);
+        clearForm();
       }}
       >
         <FormField
