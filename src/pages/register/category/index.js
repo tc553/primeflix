@@ -6,7 +6,7 @@ import Button from '../../../components/Button';
 
 function RegisterCategory() {
   const initialValues = {
-    name: '',
+    title: '',
     description: '',
     color: '',
   };
@@ -42,8 +42,7 @@ function RegisterCategory() {
   return (
     <DefaultPage>
       <h1>
-        Cadastrar categoria:
-        { values.name }
+        Cadastrar categoria: { values.title }
       </h1>
 
       <form onSubmit={function handleSubmit(e) {
@@ -59,8 +58,8 @@ function RegisterCategory() {
         <FormField
           label="Nome da categoria"
           type="text"
-          name="name"
-          value={values.name}
+          name="title"
+          value={values.title}
           onChange={handleInput}
         />
 
@@ -92,7 +91,7 @@ function RegisterCategory() {
       }
 
       <ul>
-        { categories.map((category, index) => (<li key={`${category}${index}`}>{ category.name }</li>)) }
+        { categories.map((category, index) => (<li key={`${category}${index}`}>{ category.title }</li>)) }
       </ul>
 
     </DefaultPage>
