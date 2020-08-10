@@ -1,6 +1,6 @@
 ## PrimeFlix
 
-This web app consists in a Netflix-like interface for a catalog of videos.
+This web app consists in a Netflix-like interface for a catalog of videos: https://primeflix-tc.vercel.app/
 
 I chose to add videos related to steelmaking processes to the application. I was aiming to make it a platform that might be used by my current employer in order to share knowledge to new employees who might not be familiar with the steelmaking industry. It can be used for any other purpose, though. You'd simply need to register different categories and videos.
 
