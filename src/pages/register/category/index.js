@@ -25,6 +25,9 @@ function RegisterCategory() {
         setCategories([
           ...responseJson,
         ]);
+      })
+      .catch((err) => {
+        console.log(err.message);
       });
   }, [
   ]);
