@@ -1,68 +1,20 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## PrimeFlix
 
-## Available Scripts
+This web app consists in a Netflix-like interface for a catalog of videos.
 
-In the project directory, you can run:
+I chose to add videos related to steelmaking processes to the application. I was aiming to make it a platform that might be used by my current employer in order to share knowledge to new employees who might not be familiar with the steelmaking industry. It can be used for any other purpose, though. You'd simply need to register different categories and videos.
 
-### `npm start`
+PrimeFlix was developed with React. I used ESLint for keeping code consistency and I fully recommend it. At first, I used JSON Server to mock a fake API in order to focus on front-end development. But as I got further into developing the app, I started using Heroku for the back-end. I also used Vercel for hosting.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Functionalities
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+The app has a clean, modern responsive interface. Currently, it is possible to register new videos and categories. However, some further development would be necessary in order to use it in production environment:
 
-### `npm test`
+- Allow user to remove existing videos and categories
+- Validate input values before allowing the user to submit forms
+- Handle server errors
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+#### Special thanks
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This project was developed under Alura's introductory course on React, #ImersãoReact. Although I have 5+ years of professional experience in software development, as of June/2020 I didn't have any experience with React. During this course, I was able to learn the fundamentals and build my first app. I'll continue studying React as I quite enjoyed the experience.
