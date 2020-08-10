@@ -1,8 +1,8 @@
 ## PrimeFlix
 
-This web app consists in a Netflix-like interface for a catalog of videos: https://primeflix-tc.vercel.app/
+This web app consists in a Netflix-like interface for a catalog of videos: https://primeflix-tc.vercel.app/.
 
-I chose to add videos related to steelmaking processes to the application. I was aiming to make it a platform that might be used by my current employer in order to share knowledge to new employees who might not be familiar with the steelmaking industry. It can be used for any other purpose, though. You'd simply need to register different categories and videos.
+Any video hosted in YouTube can be added to the catalog. I chose to add videos related to steelmaking processes to the application. I was aiming to make it a platform that might be used by my current employer in order to share knowledge to new employees who might not be familiar with the steelmaking industry. It can be used for any other purpose, though. You'd simply need to register different categories and videos.
 
 PrimeFlix was developed with React. I used ESLint for keeping code consistency and I fully recommend it. At first, I used JSON Server to mock a fake API in order to focus on front-end development. But as I got further into developing the app, I started using Heroku for the back-end. I also used Vercel for hosting.
 
