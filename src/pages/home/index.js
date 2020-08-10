@@ -7,7 +7,6 @@ import Footer from '../../components/Footer';
 import DefaultPage from '../../components/DefaultPage';
 import categoriesRepository from '../../repositories/categories';
 import RegisterCategory from '../register/category';
-import categories from '../../repositories/categories';
 
 function Home() {
   const [siteData, setSiteData] = useState([]);
