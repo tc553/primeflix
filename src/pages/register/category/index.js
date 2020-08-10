@@ -4,7 +4,7 @@ import DefaultPage from '../../../components/DefaultPage';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
 import useForm from '../../../hooks/useForm';
-import URL_BACKEND from '../../../config';
+import categoriesRepository from '../../../repositories/categories';
 
 function RegisterCategory() {
   const initialValues = {
@@ -18,12 +18,10 @@ function RegisterCategory() {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
-    const URL_API = `${URL_BACKEND}/categories`;
-    fetch(URL_API)
-      .then(async (response) => {
-        const responseJson = await response.json();
+    categoriesRepository.getAll()
+      .then((categoriesFromServer) => {
         setCategories([
-          ...responseJson,
+          ...categoriesFromServer,
         ]);
       })
       .catch((err) => {
@@ -85,6 +83,7 @@ function RegisterCategory() {
         )
       }
 
+      <p>Categorias existentes:</p>
       <ul>
         { categories.map((category, index) => (<li key={`${category}${index}`}>{ category.title }</li>)) }
       </ul>

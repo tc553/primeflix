@@ -37,9 +37,9 @@ function Home() {
           return (
             <div key={category.id}>
               <BannerMain
-                videoTitle={siteData[0].videos[0].title}
+                videoTitle="Plataforma de Conhecimento em Siderurgia"
                 url={siteData[0].videos[0].url}
-                videoDescription={siteData[0].videos[0].description}
+                videoDescription="Conheça os processos da indústria siderúrgica e também os produtos que oferecemos aos nossos clientes"
               />
               <Carousel
                 ignoreFirstVideo

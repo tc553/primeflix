@@ -33,7 +33,6 @@ function RegisterVideo() {
   return (
     <DefaultPage>
       <h1>Cadastrar vídeo</h1>
-      <Link to="/register/category">Nova categoria</Link>
 
       <form onSubmit={function handleSubmit(e) {
         e.preventDefault();
@@ -73,6 +72,7 @@ function RegisterVideo() {
           onChange={handleInput}
           suggestions={categoryTitles}
         />
+        <p>Não encontrou a categoria desejada? Você pode <Link to="/register/category">criar nova categoria</Link>.</p>
 
         <Button>Cadastrar</Button>
       </form>
