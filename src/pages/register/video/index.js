@@ -3,9 +3,9 @@ import { Link, useHistory } from 'react-router-dom';
 import FormField from '../../../components/FormField';
 import DefaultPage from '../../../components/DefaultPage';
 import useForm from '../../../hooks/useForm';
-import config from '../../../config';
 import Button from '../../../components/Button';
 import videosRepository from '../../../repositories/videos';
+import categoriesRepository from '../../../repositories/categories';
 
 function RegisterVideo() {
   const initialValues = {
@@ -15,17 +15,19 @@ function RegisterVideo() {
   };
 
   const { values, handleInput } = useForm(initialValues);
-  const [videos, setVideos] = useState([]);
+  const [categories, setCategories] = useState([]);
   const history = useHistory();
 
-  //   useEffect(() => {
-  //     videosRepository.create({
-  //       title: values.title,
-  //       url: values.url,
-  //       categoryId: 1,
-  //     });
-  //   }, [
-  //   ]);
+  useEffect(() => {
+    categoriesRepository.getAll()
+      .then((categoriesFromServer) => {
+        setCategories(categoriesFromServer);
+      })
+      .catch((err) => {
+        console.log(err.message);
+      });
+  }, [
+  ]);
 
   return (
     <DefaultPage>
@@ -35,14 +37,15 @@ function RegisterVideo() {
       <form onSubmit={function handleSubmit(e) {
         e.preventDefault();
 
+        const chosenCategory = categories.find((category) => category.title === values.title);
+
         videosRepository.create({
           title: values.title,
           url: values.url,
-          categoryId: 2,
+          categoryId: chosenCategory.categoryId,
         });
 
         history.push('/');
-        // clearForm();
       }}
       >
         <FormField
