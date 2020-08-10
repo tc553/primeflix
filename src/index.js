@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './pages/home/App';
+import Home from './pages/home';
 import * as serviceWorker from './serviceWorker';
 
 import {
@@ -25,7 +25,7 @@ function PageNotFound() {
 ReactDOM.render(
   <BrowserRouter>
     <Switch>
-      <Route path="/" component={App} exact />
+      <Route path="/" component={Home} exact />
       <Route path="/register/video" component={RegisterVideo} exact />
       <Route path="/register/category" component={RegisterCategory} exact />
       <Route component={PageNotFound}/>

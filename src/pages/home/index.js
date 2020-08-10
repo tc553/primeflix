@@ -6,6 +6,8 @@ import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 import DefaultPage from '../../components/DefaultPage';
 import categoriesRepository from '../../repositories/categories';
+import RegisterCategory from '../register/category';
+import categories from '../../repositories/categories';
 
 function Home() {
   const [siteData, setSiteData] = useState([]);
@@ -21,22 +23,51 @@ function Home() {
   }, []);
 
   return (
-    <DefaultPage>
-      {JSON.stringify(siteData)}
-      {/* <BannerMain
-        videoTitle={siteData.categories[0].videos[0].title}
-        url={siteData.categories[0].videos[0].url}
-        videoDescription={siteData.categories[0].videos[0].description}
-      />
+    <DefaultPage paddingAll={0}>
+      {
+        siteData.length === 0 && (
+          <div>
+            Loading...
+          </div>
+        )
+      }
 
-      <Carousel
-        ignoreFirstVideo
-        category={siteData.categories[0]}
-      />
+      {/* {
+        siteData.length >= 1 && (
+          <>
+            <BannerMain
+              videoTitle={siteData[0].videos[0].title}
+              url={siteData[0].videos[0].url}
+              videoDescription={siteData[0].videos[0].description}
+            />
+          </>
+        )
+      } */}
 
-      <Carousel
-        category={siteData.categories[1]}
-      /> */}
+      {siteData.map((category, index) => {
+        if (index === 0) {
+          return (
+            <div key={category.id}>
+              <BannerMain
+                videoTitle={siteData[0].videos[0].title}
+                url={siteData[0].videos[0].url}
+                videoDescription={siteData[0].videos[0].description}
+              />
+              <Carousel
+                ignoreFirstVideo
+                category={siteData[0]}
+              />
+            </div>
+          );
+        }
+
+        return (
+          <Carousel
+            key={category.id}
+            category={category}
+          />
+        );
+      })}
 
     </DefaultPage>
   );

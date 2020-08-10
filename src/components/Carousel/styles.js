@@ -33,6 +33,21 @@ export const ExtraLink = styled.a`
   }
 `;
 
+export const Subtitle = styled.a`
+  margin-left: 16px;
+  text-decoration: none;
+  transition: opacity .3s;
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+  @media (max-width: 800px) {
+    display: block;
+    margin-bottom: 16px;
+    margin-left: 0;
+  }
+`;
+
 export const VideoCardList = styled.ul`
   margin: 0;
   padding-left: 0;
