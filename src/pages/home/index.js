@@ -23,7 +23,8 @@ function Home() {
   }, []);
 
   return (
-    <DefaultPage paddingAll={0}>
+    <div style={{ background: '#141414' }}>
+      <Menu />
       {
         siteData.length === 0 && (
           <div>
@@ -31,18 +32,6 @@ function Home() {
           </div>
         )
       }
-
-      {/* {
-        siteData.length >= 1 && (
-          <>
-            <BannerMain
-              videoTitle={siteData[0].videos[0].title}
-              url={siteData[0].videos[0].url}
-              videoDescription={siteData[0].videos[0].description}
-            />
-          </>
-        )
-      } */}
 
       {siteData.map((category, index) => {
         if (index === 0) {
@@ -69,7 +58,8 @@ function Home() {
         );
       })}
 
-    </DefaultPage>
+      <Footer />
+    </div>
   );
 }
 
