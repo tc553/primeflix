@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import DefaultPage from '../../../components/DefaultPage';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -13,9 +13,9 @@ function RegisterCategory() {
     color: '',
   };
 
-  const { values, handleInput, clearForm } = useForm(initialValues);
-
+  const { values, handleInput } = useForm(initialValues);
   const [categories, setCategories] = useState([]);
+  const history = useHistory();
 
   useEffect(() => {
     categoriesRepository.getAll()
@@ -40,12 +40,14 @@ function RegisterCategory() {
 
       <form onSubmit={function handleSubmit(e) {
         e.preventDefault();
-        setCategories([
-          ...categories,
-          values,
-        ]);
 
-        clearForm();
+        categoriesRepository.create({
+          title: values.title,
+          description: values.description,
+          color: values.color,
+        });
+
+        history.push('/');
       }}
       >
         <FormField
