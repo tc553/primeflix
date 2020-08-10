@@ -70,6 +70,7 @@ function RegisterVideo() {
           name="category"
           value={values.category}
           onChange={handleInput}
+          suggestions={['Produção do aço', 'Nossos produtos']}
         />
 
         <Button>Cadastrar</Button>
