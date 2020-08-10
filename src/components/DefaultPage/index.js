@@ -9,6 +9,7 @@ const Main = styled.main`
     color: var(--white);
     flex: 1;
     padding-top: 50px;
+    padding-bottom: 20px;
     padding-left: 5%;
     padding-right: 5%;
     ${({ paddingAll }) => css`
