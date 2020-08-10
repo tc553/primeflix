@@ -37,12 +37,12 @@ function RegisterVideo() {
       <form onSubmit={function handleSubmit(e) {
         e.preventDefault();
 
-        const chosenCategory = categories.find((category) => category.title === values.title);
+        const chosenCategory = categories.find((category) => category.title === values.category);
 
         videosRepository.create({
           title: values.title,
           url: values.url,
-          categoryId: chosenCategory.categoryId,
+          categoryId: chosenCategory.id,
         });
 
         history.push('/');

@@ -27,7 +27,26 @@ function getAllWithVideos() {
     });
 }
 
+function create(categoryObject) {
+  return fetch(URL_CATEGORIES, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify(categoryObject),
+  })
+    .then(async (response) => {
+      if (response.ok) {
+        const responseJson = await response.json();
+        return responseJson;
+      }
+
+      throw new Error('Unable to create new category.');
+    });
+}
+
 export default {
   getAll,
   getAllWithVideos,
+  create,
 };
