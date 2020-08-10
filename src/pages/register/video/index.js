@@ -16,6 +16,7 @@ function RegisterVideo() {
 
   const { values, handleInput } = useForm(initialValues);
   const [categories, setCategories] = useState([]);
+  const categoryTitles = categories.map(({ title }) => title);
   const history = useHistory();
 
   useEffect(() => {
@@ -70,7 +71,7 @@ function RegisterVideo() {
           name="category"
           value={values.category}
           onChange={handleInput}
-          suggestions={['Produção do aço', 'Nossos produtos']}
+          suggestions={categoryTitles}
         />
 
         <Button>Cadastrar</Button>
