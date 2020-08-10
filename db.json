@@ -1,17 +1,96 @@
 {
-    "categories": [
-        {
-            "id": 1,
-            "name": "Produção do aço",
-            "description": "Vídeos sobre processos de produção de aço",
-            "color": "#cbd1ff"
-        },
-        {
-            "id": 2,
-            "name": "Nossos produtos",
-            "description": "Linha de produtos da Primetals Technologies",
-            "color": "#ff8100"
-        }
-        
-    ]
+  "categories": [
+    {
+      "id": 1,
+      "title": "Produção do aço",
+      "description": "Vídeos sobre processos de produção de aço",
+      "color": "#fd5050"
+    },
+    {
+      "id": 2,
+      "title": "Nossos produtos",
+      "description": "Linha de produtos da Primetals Technologies",
+      "color": "#ff8100"
+    }
+  ],
+  "videos": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "title": "Siderurgia",
+      "url": "https://www.youtube.com/watch?v=dGPB8KxVMyQ"
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "title": "Coqueria",
+      "url": "https://www.youtube.com/watch?v=lPR04Zmw1Nk"
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "title": "Sinterização",
+      "url": "https://www.youtube.com/watch?v=vSZTPnHjiR8"
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "title": "Pelotização",
+      "url": "https://www.youtube.com/watch?v=K9-2VmNrUqk"
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "title": "Alto-forno",
+      "url": "https://www.youtube.com/watch?v=UtMy4ZY3jgc"
+    },
+    {
+      "id": 6,
+      "categoryId": 1,
+      "title": "Aciaria",
+      "url": "https://www.youtube.com/watch?v=CrqfRuACeqE"
+    },
+    {
+      "id": 7,
+      "categoryId": 1,
+      "title": "Laminação",
+      "url": "https://www.youtube.com/watch?v=Y0w-9A1gY6A"
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "title": "Steel Meltshop",
+      "url": "https://www.youtube.com/watch?v=tJeM0LY2C_8"
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "title": "Sinter Plant",
+      "url": "https://www.youtube.com/watch?v=MsBZ2H3U58k"
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "title": "Blast Furnace",
+      "url": "https://www.youtube.com/watch?v=DqIwmRvCBaY"
+    },
+    {
+      "id": 11,
+      "categoryId": 2,
+      "title": "Corex",
+      "url": "https://www.youtube.com/watch?v=IsUQ1HXfEcI"
+    },
+    {
+      "id": 12,
+      "categoryId": 2,
+      "title": "Finex",
+      "url": "https://www.youtube.com/watch?v=mDUdUQGM45E"
+    },
+    {
+      "title": "LiquiRob System",
+      "url": "https://www.youtube.com/watch?v=6jB9FMZSk9k",
+      "categoryId": 2,
+      "id": 13
+    }
+  ]
 }
