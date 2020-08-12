@@ -5,8 +5,8 @@ import BannerMain from '../../components/BannerMain';
 import Carousel from '../../components/Carousel';
 import Footer from '../../components/Footer';
 import DefaultPage from '../../components/DefaultPage';
+import LoadingMain from '../../components/LoadingMain';
 import categoriesRepository from '../../repositories/categories';
-import RegisterCategory from '../register/category';
 
 function Home() {
   const [siteData, setSiteData] = useState([]);
@@ -26,9 +26,7 @@ function Home() {
       <Menu />
       {
         siteData.length === 0 && (
-          <div>
-            Loading...
-          </div>
+          <LoadingMain />
         )
       }
 
